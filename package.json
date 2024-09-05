@@ -1,0 +1,16 @@
+{
+  "name": "dialogtest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "jquery-3.6.0.min.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "juice": "^11.0.0",
+    "juicer": "^0.6.15"
+  }
+}

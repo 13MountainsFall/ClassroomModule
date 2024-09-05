@@ -1,0 +1,14 @@
+<!-- b.html -->
+{@each data as classroom}
+    <div class="classroom">
+        <h2>Classroom: ${classroom.classroom}</h2>
+        <ul>
+            {@each classroom.students as student}
+                <li>
+                    <strong>Name:</strong> ${student.name} 
+                    <strong>Age:</strong> ${student.age}
+                </li>
+            {@/each}
+        </ul>
+    </div>
+{@/each}
