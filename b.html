@@ -1,14 +1,24 @@
 <!-- b.html -->
-{@each data as classroom}
-    <div class="classroom">
-        <h2>Classroom: ${classroom.classroom}</h2>
-        <ul>
-            {@each classroom.students as student}
-                <li>
-                    <strong>Name:</strong> ${student.name} 
-                    <strong>Age:</strong> ${student.age}
-                </li>
-            {@/each}
-        </ul>
-    </div>
-{@/each}
+<div>
+    <button id="addClassroom">新增班级</button>
+    <button id="printData">打印 JSON 数据</button>
+</div>
+
+<div id="classrooms">
+    {@each data as classroom, index}
+        <div class="classroom" data-index="${index}">
+            <h2>Classroom: ${classroom.classroom}</h2>
+            <button class="addStudent">新增学生</button>
+            <button class="removeClassroom">删除班级</button>
+            <ul>
+                {@each classroom.students as student, sIndex}
+                    <li data-sindex="${sIndex}">
+                        <label><strong>Name:</strong> <input type="text" class="student-name" value="${student.name}"></label>
+                        <label><strong>Age:</strong> <input type="number" class="student-age" value="${student.age}"></label>
+                        <button class="removeStudent">删除学生</button>
+                    </li>
+                {@/each}
+            </ul>
+        </div>
+    {@/each}
+</div>
